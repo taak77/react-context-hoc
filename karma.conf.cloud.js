@@ -39,6 +39,7 @@ module.exports = function (config) {
         }
     };
 
+    // "saucelabs" reporter is necessary for their status badge to reflect the test result.
     config.set({
         captureTimeout: 120000,
         browserNoActivityTimeout: 1500000,
@@ -67,7 +68,7 @@ module.exports = function (config) {
     }
 
     if (process.env.TRAVIS) {
-        // Sauce Connect through 'karma-sauce-launcher' doesn't work on Travis, use 'sauce_connect' addon
+        // Sauce Connect through "karma-sauce-launcher" doesn"t work on Travis, use "sauce_connect" addon
         config.sauceLabs.startConnect = false;
         config.sauceLabs.connectOptions = {
             port: 5757
