@@ -69,8 +69,7 @@ module.exports = function (config) {
     if (process.env.TRAVIS) {
         config.sauceLabs.startConnect = false;
         config.sauceLabs.connectOptions = {
-            port: 5757,
-            logfile: "sauce_connect.log"
+            port: 5757
         };
         config.sauceLabs.build = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
         config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
