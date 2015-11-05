@@ -1,0 +1,57 @@
+{
+  "name": "react-context-hoc",
+  "version": "0.0.1",
+  "description": "a utility Hoc wrapper to provide context",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/taak77/react-context-hoc.git"
+  },
+  "author": "Takashi Aoki(http://github.com/taak77)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taak77/react-context-hoc/issues"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^1.0.3",
+    "rimraf": "^2.4.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.2",
+    "eslint": "^1.6.0",
+    "eslint-config-nfl": "^4.0.2",
+    "eslint-plugin-import": "^0.8.1",
+    "eslint-plugin-react": "3.6.3",
+    "isparta-loader": "^1.0.0",
+    "karma": "^0.13.15",
+    "karma-chai-sinon": "^0.1.5",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cli": "0.1.1",
+    "karma-coverage": "^0.5.3",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-sauce-launcher": "^0.3.0",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-tap-reporter": "0.0.4",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.3",
+    "react": "0.14.2",
+    "react-addons-test-utils": "0.14.2",
+    "react-dom": "0.14.2",
+    "sinon": "^1.17.1",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf lib build",
+    "compile": "babel src --out-dir lib",
+    "lint": "eslint src test",
+    "pretest": "npm run build",
+    "prepublish": "npm run build",
+    "test": "npm run lint && karma start"
+  }
+}
