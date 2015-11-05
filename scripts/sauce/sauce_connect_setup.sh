@@ -47,11 +47,3 @@ echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
 sauce-connect/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY $ARGS \
   --logfile $CONNECT_LOG 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
-
-# Wait for Connect to be ready before exiting
-printf "Connecting to Sauce."
-while [ ! -f $BROWSER_PROVIDER_READY_FILE ]; do
-  printf "."
-  sleep .5
-done
-echo "Connected"
