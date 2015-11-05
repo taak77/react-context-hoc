@@ -7,23 +7,44 @@ module.exports = function (config) {
             browserName: "Chrome",
             version: "45"
         },
+        SL_Chrome: {
+            base: "SauceLabs",
+            browserName: "Chrome",
+            version: "46"
+        },
         SL_Firefox: {
             base: "SauceLabs",
             browserName: "Firefox",
             version: "40"
         },
-        // FIXME: can never run test on Safari
+        SL_Firefox: {
+            base: "SauceLabs",
+            browserName: "Firefox",
+            version: "41"
+        },
         SL_iOS_Safari: {
             base: "SauceLabs",
             browserName: "iphone",
             platform: "OS X 10.10",
             version: "8.4"
         },
+        SL_iOS_Safari: {
+            base: "SauceLabs",
+            browserName: "iphone",
+            platform: "OS X 10.11",
+            version: "9.1"
+        },
         SL_OSX_Safari: {
             base: "SauceLabs",
             browserName: "Safari",
             platform: "OS X 10.10",
             version: "8"
+        },
+        SL_OSX_Safari: {
+            base: "SauceLabs",
+            browserName: "Safari",
+            platform: "OS X 10.11",
+            version: "9"
         },
         SL_InternetExplorer10: {
             base: "SauceLabs",
@@ -36,6 +57,18 @@ module.exports = function (config) {
             browserName: "Internet Explorer",
             platform: "Windows 8.1",
             version: "11"
+        },
+        SL_ANDROID4: {
+            base: "SauceLabs",
+            browserName: "android",
+            platform: "Linux",
+            version: "4.4"
+        },
+        SL_ANDROID5: {
+            base: "SauceLabs",
+            browserName: "android",
+            platform: "Linux",
+            version: "5.1"
         }
     };
 
