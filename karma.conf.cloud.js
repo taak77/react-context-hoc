@@ -22,25 +22,25 @@ module.exports = function (config) {
             browserName: "Firefox",
             version: "41"
         },
-        SL_iOS_Safari: {
+        SL_iOS8_Safari: {
             base: "SauceLabs",
             browserName: "iphone",
             platform: "OS X 10.10",
             version: "8.4"
         },
-        SL_iOS_Safari: {
+        SL_iOS9_Safari: {
             base: "SauceLabs",
             browserName: "iphone",
             platform: "OS X 10.11",
             version: "9.1"
         },
-        SL_OSX_Safari: {
+        SL_OSX_Safari8: {
             base: "SauceLabs",
             browserName: "Safari",
             platform: "OS X 10.10",
             version: "8"
         },
-        SL_OSX_Safari: {
+        SL_OSX_Safari9: {
             base: "SauceLabs",
             browserName: "Safari",
             platform: "OS X 10.11",
