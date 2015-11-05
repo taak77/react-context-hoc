@@ -66,6 +66,7 @@ module.exports = function (config) {
     }
 
     if (process.env.TRAVIS) {
+        // Sauce Connect through 'karma-sauce-launcher' doesn't work on Travis, use 'sauce_connect' addon
         config.sauceLabs.startConnect = false;
         config.sauceLabs.connectOptions = {
             port: 5757
