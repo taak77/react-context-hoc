@@ -43,7 +43,7 @@ module.exports = function (config) {
     config.set({
         sauceLabs: {
             testName: "react-context-hoc",
-            startConnect: process.env.TRAVIS ? false : true,
+            startConnect: true,
             recordVideo: false,
             recordScreenshots: false,
             options: {
