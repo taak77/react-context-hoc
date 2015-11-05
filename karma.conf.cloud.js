@@ -13,7 +13,7 @@ module.exports = function (config) {
             version: "40"
         },
         // FIXME: can never run test on Safari
-        /*SL_iOS_Safari: {
+        SL_iOS_Safari: {
             base: "SauceLabs",
             browserName: "iphone",
             platform: "OS X 10.10",
@@ -24,7 +24,7 @@ module.exports = function (config) {
             browserName: "Safari",
             platform: "OS X 10.10",
             version: "8"
-        },*/
+        },
         SL_InternetExplorer10: {
             base: "SauceLabs",
             browserName: "Internet Explorer",
@@ -55,8 +55,7 @@ module.exports = function (config) {
             }
         },
         customLaunchers: customLaunchers,
-        browsers: Object.keys(customLaunchers)/*,
-        reporters: ["dots", "saucelabs"]*/
+        browsers: Object.keys(customLaunchers)
     });
 
     if (process.env.DEBUG_SAUCE) {
