@@ -7,7 +7,7 @@ module.exports = function (config) {
             browserName: "Chrome",
             version: "45"
         },
-        SL_Chrome: {
+        SL_Chrome_Latest: {
             base: "SauceLabs",
             browserName: "Chrome",
             version: "46"
@@ -17,7 +17,7 @@ module.exports = function (config) {
             browserName: "Firefox",
             version: "40"
         },
-        SL_Firefox: {
+        SL_Firefox_Latest: {
             base: "SauceLabs",
             browserName: "Firefox",
             version: "41"
@@ -81,6 +81,7 @@ module.exports = function (config) {
             startConnect: true,
             recordVideo: false,
             recordScreenshots: false,
+            tunnelIdentifier: null,
             options: {
                 "selenium-version": "2.47.1",
                 "command-timeout": 600,
