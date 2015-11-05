@@ -40,6 +40,8 @@ module.exports = function (config) {
     };
 
     config.set({
+        captureTimeout: 120000,
+        browserNoActivityTimeout: 1500000,
         sauceLabs: {
             testName: "react-context-hoc",
             startConnect: true,
@@ -54,8 +56,7 @@ module.exports = function (config) {
         },
         customLaunchers: customLaunchers,
         browsers: Object.keys(customLaunchers),
-        reporters: ["dots", "saucelabs"],
-        captureTimeout: 300000
+        reporters: ["dots", "saucelabs"]
     });
 
     if (process.env.DEBUG_SAUCE) {
@@ -74,7 +75,8 @@ module.exports = function (config) {
         config.sauceLabs.build = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
         config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
         // TODO: remove once SauceLabs supports websockets.
-        // This speeds up the capturing a bit, as browsers don't even try to use websocket.
-        config.transports = ["xhr-polling"];
+        // This speeds up the capturing a bit, as browsers don"t even try to use websocket.
+        console.log(">>>> setting socket.io transport to polling <<<<");
+        config.transports = ["polling"];
     }
 };
