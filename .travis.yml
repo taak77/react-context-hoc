@@ -5,6 +5,7 @@ node_js:
   - '0.12'
 env:
   global:
+    - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
     - LOGS_DIR=/tmp/reac-context-hoc-build/logs
     - USE_CLOUD=false
     - secure: esVGgNUvmaLDc3TLryoqK8I6rc1IxAkdnQ8ZoWzKRM7bTnAMioI+L9HgWDgGsdeAsI0JZddVbsWnbSqUJ69pzqMVC5lBIBlgRrKiFy6HRe2YHoRaoKihkGLN0lV+4hM4lvmP52RsMdgjU+hcCxI8u9fQQMKYuDAvELu0+44w6ff/lDWBoxYI2o5Ct2Npcxhz8xQt4PvAjEZ5B2cHTE7pHuwgn71gqiOCr0YvHE3RXnZBOsgTF9qwi8ZnNo8xLbcd8zQtJyo5MTqSfLT8rSSVV/B9zSrMRkXtf+d4SxofLkq6E2gVwIw58x4tUN81qV+Dw4cPGTyjevBvDpAOWfgg61kYmAMS8fMIGfnDJk2DJKiRpIkwCe1pHnsGGkyr7R/P0xqGJdopoElOtq24LkKowSXCW+VJaipXkh6sqtBESCjkGChw78f4E4fb/wtVMDt3+SrWOp8TtiYcrFOxucEhs5n01ZM4QJLGNvdSFwbO9t2QFqauXFDhhp1rZusZf7//WWUSqE9zbfwFFiqnYWD8AzI2kXTpfigRuSxh/BF4z2TWEbtlgOLB4RQNhRoZYnTqBZ8YiUhzCuZ65U3FnfUDWveOITmi6oOmvavlVYbYF2y+ZiJlTRNepry3moaT4uDSBuXcYCsY7i6GZbCmMfrxCWoFarzD5zY43q4pm+gVUfQ=
@@ -23,8 +24,8 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 before_script:
   - mkdir -p $LOGS_DIR
-  - ./scripts/sauce_connect_setup.sh
+  - ./scripts/setup.sh
 script:
   - npm test
 after_script:
-- ./scripts/sauce_connect_teardown.sh
+- ./scripts/teardown.sh

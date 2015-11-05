@@ -16,7 +16,6 @@ CONNECT_URL="https://saucelabs.com/downloads/sc-4.3.11-linux.tar.gz"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 CONNECT_DOWNLOAD="sc-latest-linux.tar.gz"
 
-BROWSER_PROVIDER_READY_FILE="/tmp/sauce-connect-ready"
 CONNECT_LOG="$LOGS_DIR/sauce-connect"
 CONNECT_STDOUT="$LOGS_DIR/sauce-connect.stdout"
 CONNECT_STDERR="$LOGS_DIR/sauce-connect.stderr"
