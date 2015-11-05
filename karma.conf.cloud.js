@@ -54,8 +54,8 @@ module.exports = function (config) {
         },
         customLaunchers: customLaunchers,
         browsers: Object.keys(customLaunchers),
-        /*reporters: ["dots", "saucelabs"],*/
-        captureTimeout: 0
+        reporters: ["dots", "saucelabs"],
+        captureTimeout: 300000
     });
 
     if (process.env.DEBUG_SAUCE) {
