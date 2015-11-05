@@ -39,11 +39,10 @@ module.exports = function (config) {
         }
     };
 
-    console.log("Starting test on Sauce Labs");
     config.set({
         sauceLabs: {
             testName: "react-context-hoc",
-            startConnect: true,
+            startConnect: false,
             recordVideo: false,
             recordScreenshots: false,
             options: {
