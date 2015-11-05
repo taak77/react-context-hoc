@@ -83,5 +83,7 @@ module.exports = function (config) {
 
     if (process.env.CI) {
         require("./karma.conf.ci.js")(config);
+    } else if (process.env.USE_CLOUD) {
+        require("./karma.conf.cloud.js")(config);
     }
 };
