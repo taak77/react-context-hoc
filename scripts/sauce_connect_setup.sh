@@ -16,7 +16,7 @@ CONNECT_URL="https://saucelabs.com/downloads/sc-4.3.11-linux.tar.gz"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 CONNECT_DOWNLOAD="sc-latest-linux.tar.gz"
 
-#BROWSER_PROVIDER_READY_FILE="$LOGS_DIR/sauce-connect-ready"
+BROWSER_PROVIDER_READY_FILE="$LOGS_DIR/sauce-connect-ready"
 CONNECT_LOG="$LOGS_DIR/sauce-connect"
 CONNECT_STDOUT="$LOGS_DIR/sauce-connect.stdout"
 CONNECT_STDERR="$LOGS_DIR/sauce-connect.stderr"
@@ -48,3 +48,11 @@ echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
 sauce-connect/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY $ARGS \
   --logfile $CONNECT_LOG 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
+
+# Wait for Connect to be ready before exiting
+printf "Connecting to Sauce."
+while [ ! -f $BROWSER_PROVIDER_READY_FILE ]; do
+  printf "."
+  sleep .5
+done
+echo "Connected"

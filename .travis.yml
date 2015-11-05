@@ -23,9 +23,9 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 before_script:
   - mkdir -p $LOGS_DIR
-script:
   - ./scripts/sauce_connect_setup.sh
   - ./scripts/sauce_connect_block.sh
+script:
   - npm test
 after_script:
 - ./scripts/sauce_connect_teardown.sh
