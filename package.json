@@ -1,6 +1,6 @@
 {
   "name": "react-context-hoc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a utility Hoc wrapper to provide context",
   "main": "lib/index.js",
   "repository": {
