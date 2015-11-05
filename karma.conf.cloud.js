@@ -42,7 +42,7 @@ module.exports = function (config) {
     config.set({
         sauceLabs: {
             testName: "react-context-hoc",
-            startConnect: false,
+            startConnect: true,
             recordVideo: false,
             recordScreenshots: false,
             options: {
@@ -55,7 +55,7 @@ module.exports = function (config) {
         customLaunchers: customLaunchers,
         browsers: Object.keys(customLaunchers),
         reporters: ["dots", "saucelabs"],
-        captureTimeout: 120000
+        captureTimeout: 0
     });
 
     if (process.env.DEBUG_SAUCE) {
@@ -66,8 +66,13 @@ module.exports = function (config) {
     }
 
     if (process.env.TRAVIS) {
+        config.sauceLabs.startConnect = false;
+        config.sauceLabs.connectOptions = {
+            port: 5757,
+            logfile: "sauce_connect.log"
+        };
         config.sauceLabs.build = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
         config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
-        config.transports = ["xhr-polling"];
+        // config.transports = ["xhr-polling"];
     }
 };
