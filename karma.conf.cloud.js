@@ -107,7 +107,7 @@ module.exports = function (config) {
             process.env.SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY_PR;
         }
         console.log("From karma.conf.cloud.js");
-        console.log("TRAVIS_PULL_REQUEST: ", process.env.TRAVIS_PULL_REQUEST, typeof process.env.TRAVIS_PULL_REQUEST);
+        console.log("TRAVIS_PULL_REQUEST: ", process.env.TRAVIS_PULL_REQUEST);
         console.log("TRAVIS_BRANCH: ", process.env.TRAVIS_BRANCH);
         console.log("SAUCE_USERNAME: ", process.env.SAUCE_USERNAME);
         console.log("SAUCE_ACCESS_KEY: ", process.env.SAUCE_ACCESS_KEY);
