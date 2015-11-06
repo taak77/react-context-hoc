@@ -102,7 +102,7 @@ module.exports = function (config) {
     }
 
     if (process.env.TRAVIS) {
-        if (process.env.TRAVIS_PULL_REQUEST === "true" || process.env.TRAVIS_BRANCH !== "master") {
+        if (process.env.TRAVIS_PULL_REQUEST !== "false" || process.env.TRAVIS_BRANCH !== "master") {
             process.env.SAUCE_USERNAME = process.env.SAUCE_USERNAME_PR;
             process.env.SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY_PR;
         }
