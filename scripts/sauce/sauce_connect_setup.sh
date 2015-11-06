@@ -34,6 +34,8 @@ if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" != "master" ]; then
 fi
 
 echo "From setup.sh"
+echo "TRAVIS_PULL_REQUEST: $TRAVIS_PULL_REQUEST"
+echo "TRAVIS_BRANCH: $TRAVIS_BRANCH"
 echo "SAUCE_USERNAME: $SAUCE_USERNAME"
 echo "SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY"
 
