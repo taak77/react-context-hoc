@@ -28,7 +28,14 @@ mkdir sauce-connect
 tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-connect > /dev/null
 rm $CONNECT_DOWNLOAD
 
-SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" = "master" ]; then
+  SAUCE_USERNAME="$SAUCE_USERNAME2"
+  SAUCE_ACCESS_KEY="$SAUCE_ACCESS_KEY2"
+fi
+
+echo "From setup.sh"
+echo "SAUCE_USERNAME: $SAUCE_USERNAME"
+echo "SAUCE_ACCESS_KEY: SAUCE_ACCESS_KEY"
 
 ARGS=""
 
