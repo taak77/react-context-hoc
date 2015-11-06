@@ -12,7 +12,7 @@ module.exports = function (config) {
         },
 
         frameworks: [
-            "chai-sinon",
+            "chai",
             "mocha"
         ],
 

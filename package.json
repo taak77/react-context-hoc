@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^3.7.1",
     "isparta-loader": "^1.0.0",
     "karma": "^0.13.15",
-    "karma-chai-sinon": "^0.1.5",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-cli": "0.1.1",
     "karma-coverage": "^0.5.3",
@@ -42,8 +42,6 @@
     "react": "0.14.2",
     "react-addons-test-utils": "0.14.2",
     "react-dom": "0.14.2",
-    "sinon": "^1.17.1",
-    "sinon-chai": "^2.8.0",
     "webpack": "^1.12.2"
   },
   "scripts": {
