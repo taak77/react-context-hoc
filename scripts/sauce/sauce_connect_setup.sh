@@ -28,9 +28,9 @@ mkdir sauce-connect
 tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-connect > /dev/null
 rm $CONNECT_DOWNLOAD
 
-if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" = "master" ]; then
-  SAUCE_USERNAME="$SAUCE_USERNAME2"
-  SAUCE_ACCESS_KEY="$SAUCE_ACCESS_KEY2"
+if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" != "master" ]; then
+  SAUCE_USERNAME="$SAUCE_USERNAME_PR"
+  SAUCE_ACCESS_KEY="$SAUCE_ACCESS_KEY_PR"
 fi
 
 echo "From setup.sh"
