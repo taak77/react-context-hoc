@@ -78,10 +78,10 @@ module.exports = function (config) {
         browserNoActivityTimeout: 1500000,
         sauceLabs: {
             testName: "react-context-hoc",
-            startConnect: true,
+            startConnect: false,
             recordVideo: false,
             recordScreenshots: false,
-            tunnelIdentifier: null,
+            tunnelIdentifier: "0",
             options: {
                 "selenium-version": "2.47.1",
                 "command-timeout": 600,
@@ -102,6 +102,7 @@ module.exports = function (config) {
     }
 
     if (process.env.TRAVIS) {
+        process.env.SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY.split("").reverse().join("");
         // Sauce Connect through "karma-sauce-launcher" doesn"t work on Travis, use "sauce_connect" addon
         config.sauceLabs.startConnect = false;
         config.sauceLabs.connectOptions = {
