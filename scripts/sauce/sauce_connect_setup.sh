@@ -29,6 +29,7 @@ tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-co
 rm $CONNECT_DOWNLOAD
 
 if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" != "master" ]; then
+  echo "This is PR or feature branch"
   SAUCE_USERNAME="$SAUCE_USERNAME_PR"
   SAUCE_ACCESS_KEY="$SAUCE_ACCESS_KEY_PR"
 fi
