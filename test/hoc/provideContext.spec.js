@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp, max-nested-callbacks, react/prop-types, no-empty, padded-blocks */
 import React, {PropTypes, Component} from "react";
 import ReactDOM from "react-dom";
-import {provideContext} from "../src/index";
+import {provideContext} from "../../src/index";
 
 describe("provideContext", () => {
     let node;
