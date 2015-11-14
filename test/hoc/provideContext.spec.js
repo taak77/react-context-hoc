@@ -52,6 +52,42 @@ describe("provideContext", () => {
 
     });
 
+    it("can pass data as props to children", (done) => {
+        class Child extends Component {
+            render() {
+                return (
+                    <div>Child</div>
+                );
+            }
+        }
+
+        class App extends Component {
+            static propTypes = {
+                appName: PropTypes.string
+            }
+            componentDidMount() {
+                expect(this.props.appName).to.equal("My Application");
+                done();
+            }
+            render() {
+                return (
+                    <div><Child/></div>
+                );
+            }
+        }
+
+        const WrappedApp = provideContext({
+            appName: "My Application"
+        }, {
+            appName: PropTypes.string
+        })(App);
+
+        ReactDOM.render((
+            <WrappedApp />
+        ), node);
+
+    });
+
     it("works with decorator", (done) => {
         class Child extends Component {
             static contextTypes = {

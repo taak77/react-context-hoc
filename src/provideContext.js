@@ -23,7 +23,7 @@ export default function provideContext(context = {}, contextTypes = {}) {
 
             render() {
                 return (
-                    <ComposedComponent {...this.props}/>
+                    <ComposedComponent {...this.props} {...context}/>
                 );
             }
         }
