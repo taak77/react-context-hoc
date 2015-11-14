@@ -1,1 +1,1 @@
-export {default as provideContext} from "./provideContext";
+export {default as configurable} from "./configurable";

@@ -5,15 +5,15 @@ function getDisplayName(Comp) {
     return Comp.displayName || Comp.name || "Component";
 }
 
-export default function provideContext(context = {}, contextTypes = {}) {
+export default function configurable(context = {}, contextTypes = {}) {
     const childContextTypes = Object.keys(context).reduce((types, key) => {
         types[key] = contextTypes[key] || PropTypes.any;
         return types;
     }, {});
 
     return function wrap(ComposedComponent) {
-        class Hoc extends Component {
-            static displayName = `Hoc(${getDisplayName(ComposedComponent)})`
+        class Cofigufure extends Component {
+            static displayName = `Cofigufured(${getDisplayName(ComposedComponent)})`
 
             static childContextTypes = childContextTypes
 
@@ -28,6 +28,6 @@ export default function provideContext(context = {}, contextTypes = {}) {
             }
         }
 
-        return hoistStatics(Hoc, ComposedComponent);
+        return hoistStatics(Cofigufure, ComposedComponent);
     };
 }

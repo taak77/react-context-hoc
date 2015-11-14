@@ -1,9 +1,9 @@
 /* eslint-disable react/no-multi-comp, max-nested-callbacks, react/prop-types, no-empty, padded-blocks */
 import React, {PropTypes, Component} from "react";
 import ReactDOM from "react-dom";
-import {provideContext} from "../../src/index";
+import {configurable} from "../../src/index";
 
-describe("provideContext", () => {
+describe("configurable", () => {
     let node;
 
     beforeEach(() => {
@@ -40,7 +40,7 @@ describe("provideContext", () => {
             }
         }
 
-        const WrappedApp = provideContext({
+        const WrappedApp = configurable({
             appName: "My Application"
         }, {
             appName: PropTypes.string
@@ -76,7 +76,7 @@ describe("provideContext", () => {
             }
         }
 
-        const WrappedApp = provideContext({
+        const WrappedApp = configurable({
             appName: "My Application"
         }, {
             appName: PropTypes.string
@@ -104,7 +104,7 @@ describe("provideContext", () => {
             }
         }
 
-        @provideContext({
+        @configurable({
             appName: "My Application"
         }, {
             appName: PropTypes.string
