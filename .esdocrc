@@ -1,0 +1,13 @@
+{
+    "title": "React Context HOC",
+    "source": "./src",
+    "destination": "./docs",
+    "access": ["public", "protected", "private"],
+    "test": {
+        "type": "mocha",
+        "source": "./test"
+    },
+    "plugins": [
+        { "name": "esdoc-es7-plugin" }
+    ]
+}
