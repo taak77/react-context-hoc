@@ -2,6 +2,7 @@
 [![npm package](https://img.shields.io/npm/v/react-context-hoc.svg?style=flat)](https://www.npmjs.org/package/react-context-hoc)
 [![build status](https://img.shields.io/travis/taak77/react-context-hoc/master.svg?style=flat)](https://travis-ci.org/taak77/react-context-hoc)
 [![dependency status](https://img.shields.io/david/taak77/react-context-hoc.svg?style=flat)](https://david-dm.org/taak77/react-context-hoc)
+[![codecov.io](https://codecov.io/github/taak77/react-context-hoc/coverage.svg?branch=master)](https://codecov.io/github/taak77/react-context-hoc?branch=master)
 [![documentation status](https://cdn.rawgit.com/taak77/react-context-hoc/master/docs/badge.svg)](/docs)
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/react-context-hoc.svg)](https://saucelabs.com/u/react-context-hoc)
 

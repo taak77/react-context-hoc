@@ -1,6 +1,12 @@
 /* eslint-disable camelcase */
 module.exports = function (config) {
     config.set({
+        coverageReporter: {
+            reporters: [
+                {type: "html", subdir: "html"},
+                {type: "lcovonly", subdir: "."}
+            ]
+        },
         autoWatch: false,
         singleRun: true
     });
