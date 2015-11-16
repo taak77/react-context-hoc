@@ -1,7 +1,7 @@
 {
     "title": "React Context HOC",
     "source": "./src",
-    "destination": "./docs",
+    "destination": "./esdocs",
     "access": ["public", "protected", "private"],
     "test": {
         "type": "mocha",

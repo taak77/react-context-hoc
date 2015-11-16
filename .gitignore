@@ -1,5 +1,6 @@
 node_modules/
 lib/
 coverage/
+esdocs/
 npm-debug.log
 .DS_Store
