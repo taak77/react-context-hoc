@@ -57,6 +57,6 @@
     "prepublish": "npm run build",
     "test": "npm run lint && karma start",
     "docs": "esdoc -c esdoc.json; open esdocs/index.html",
-    "deploy-docs": "esdoc-uploader"
+    "deploy-docs": "esdoc-uploader && echo 'ESDoc deployed'"
   }
 }
