@@ -11,6 +11,8 @@ module.exports = function (config) {
         singleRun: true
     });
 
+    console.log("TRAVIS_NODE_VERSION", process.env.TRAVIS_NODE_VERSION);
+
     if (process.env.USE_CLOUD === "true" && process.env.SAUCE_USERNAME) {
         require("./karma.conf.cloud.js")(config);
     } else {
