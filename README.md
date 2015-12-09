@@ -18,6 +18,10 @@ An utility tool to provide context to [React](https://github.com/facebook/react)
 $ npm install --save react-context-hoc
 ```
 
+## Thanks
+
+Thanks [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows to run the build in real browsers.
+
 ## License
 
 MIT
