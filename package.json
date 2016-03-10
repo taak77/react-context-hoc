@@ -55,6 +55,7 @@
     "lint": "eslint src test",
     "pretest": "npm run build",
     "prepublish": "npm run build",
+    "postinstall": "node ./npm-scripts/postinstall.js",
     "test": "npm run lint && karma start",
     "docs": "esdoc -c esdoc.json; open esdocs/index.html",
     "deploy-docs": "esdoc-uploader && echo 'ESDoc deployed'"
